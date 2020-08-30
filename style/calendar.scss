@@ -1,0 +1,119 @@
+.app-block {
+    cursor: default;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .prev {
+        position: absolute;
+        cursor: pointer;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: center;
+        border-style: solid;
+        border-left: none;
+        border-width: .2px;
+        border-color: rgba(0, 0, 0, 0.075);
+        border-radius: 0 20px 20px 0;
+        height: 20vh;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.096);
+        }
+    }
+
+    .next {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        text-align: center;
+        border-style: double;
+        border-right: none;
+        border-width: .2px;
+        border-color: rgba(0, 0, 0, 0.075);
+        border-radius: 20px 0 0 20px;
+        height: 20vh;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.096);
+        }
+
+    }
+}
+
+.calendar {
+    border-style: double;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 99vw;
+    margin: 0;
+    background-color: #BAEEF7;
+    background: linear-gradient(to bottom, #BAEEF7, rgba(0, 0, 0, 0));
+
+    &-table {
+        margin: auto;
+
+        &-head {
+            &-row {
+                &-name {
+                    border: solid;
+                    border-radius: 20px;
+                    border: 4px ridge rgba(255, 255, 255, 0.212);
+
+                }
+            }
+        }
+
+        &-body {
+            border-width: .2px;
+
+            &-row {
+                td {
+                    border-radius: 20px;
+                    border-width: .5px;
+                    height: 10vh;
+                    width: 10vw;
+                    text-align: center;
+                    font-weight: 700;
+                    border: 4px ridge rgba(255, 255, 255, 0.212);
+
+                    &:nth-of-type(2n) {
+                        background-color: #cacaca88;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #707bda2f;
+                        }
+
+                        &.ui-state-highlight {
+                            background-color: blueviolet;
+                        }
+                    }
+
+                    &:nth-of-type(2n+1) {
+                        background-color: #cacaca54;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #707bda2f;
+                        }
+                    }
+
+                    &.notThisMonth {
+                        color: rgba(0, 0, 0, 0.164);
+                    }
+
+                    &.isThisDay {
+                        background-color: #616161d2;
+                    }
+                }
+            }
+
+        }
+    }
+}

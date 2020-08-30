@@ -1,0 +1,111 @@
+html {
+  font-family: 'Permanent Marker', cursive;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
+}
+
+html .menu {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+html .menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2vw;
+  height: 2vh;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+html .menu-btn.open .menu-btn_burger {
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+html .menu-btn.open .menu-btn_burger::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+html .menu-btn.open .menu-btn_burger::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
+}
+
+html .menu-btn_burger {
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: white;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-box-shadow: 0 2px 5px gray;
+          box-shadow: 0 2px 5px gray;
+}
+
+html .menu-btn_burger::before, html .menu-btn_burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px gray;
+          box-shadow: 0 2px 5px gray;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+html .menu-btn_burger::before {
+  -webkit-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+
+html .menu-btn_burger::after {
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+html .root {
+  position: relative;
+  margin: auto;
+  width: 90vw;
+}
+
+html .title {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,130 @@
+.app-block {
+  cursor: default;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-block .prev {
+  position: absolute;
+  cursor: pointer;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+  border-style: solid;
+  border-left: none;
+  border-width: .2px;
+  border-color: rgba(0, 0, 0, 0.075);
+  border-radius: 0 20px 20px 0;
+  height: 20vh;
+}
+
+.app-block .prev:hover {
+  background-color: rgba(0, 0, 0, 0.096);
+}
+
+.app-block .next {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+  border-style: double;
+  border-right: none;
+  border-width: .2px;
+  border-color: rgba(0, 0, 0, 0.075);
+  border-radius: 20px 0 0 20px;
+  height: 20vh;
+}
+
+.app-block .next:hover {
+  background-color: rgba(0, 0, 0, 0.096);
+}
+
+.calendar {
+  border-style: double;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 99vw;
+  margin: 0;
+  background-color: #BAEEF7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BAEEF7), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, #BAEEF7, rgba(0, 0, 0, 0));
+}
+
+.calendar-table {
+  margin: auto;
+}
+
+.calendar-table-head-row-name {
+  border: solid;
+  border-radius: 20px;
+  border: 4px ridge rgba(255, 255, 255, 0.212);
+}
+
+.calendar-table-body {
+  border-width: .2px;
+}
+
+.calendar-table-body-row td {
+  border-radius: 20px;
+  border-width: .5px;
+  height: 10vh;
+  width: 10vw;
+  text-align: center;
+  font-weight: 700;
+  border: 4px ridge rgba(255, 255, 255, 0.212);
+}
+
+.calendar-table-body-row td:nth-of-type(2n) {
+  background-color: #cacaca88;
+  cursor: pointer;
+}
+
+.calendar-table-body-row td:nth-of-type(2n):hover {
+  background-color: #707bda2f;
+}
+
+.calendar-table-body-row td:nth-of-type(2n).ui-state-highlight {
+  background-color: blueviolet;
+}
+
+.calendar-table-body-row td:nth-of-type(2n+1) {
+  background-color: #cacaca54;
+  cursor: pointer;
+}
+
+.calendar-table-body-row td:nth-of-type(2n+1):hover {
+  background-color: #707bda2f;
+}
+
+.calendar-table-body-row td.notThisMonth {
+  color: rgba(0, 0, 0, 0.164);
+}
+
+.calendar-table-body-row td.isThisDay {
+  background-color: #616161d2;
+}
+/*# sourceMappingURL=calendar.css.map */

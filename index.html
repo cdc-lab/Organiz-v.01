@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Cdc_429_laB" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/todo.css" />
+    <link rel="stylesheet" href="/style/calendar.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="./javascript/index.mjs"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Organ-Iz</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Organ-Iz</h1>
+      <!--<p class="title-description">Easy organisation tool</p>-->
+    </header>
+    <div class="root">
+      <div class="app-block">
+        <div class="menu">
+          <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+          </div>
+        </div>
+        <div class="prev">prev</div>
+        <fieldset class="calendar">
+          <legend class="calendar-month-name">Month</legend>
+          <div class="create"></div>
+        </fieldset>
+        <div class="next">next</div>
+      </div>
+      <!--Todo List insert-->
+      <div class="form">
+        <div class="form_display">
+          <h2 class="form_display_title">TODO list</h2>
+          <ol class="form_display_list"></ol>
+          <form class="form_display_add-todo">
+            <div>
+              <input
+                type="text"
+                maxlength="30"
+                name="add"
+                id="add_input"
+                class="form_add-add_input"
+                placeholder="What TODO ?"
+              />
+              <button type="submit" id="add_btn">Add</button>
+            </div>
+            <progress id="progress_bar" max="10" value="0"></progress>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+//author-name: Cdc_429_laB
+
+.form {
+    position: absolute;
+    margin-top: 12px;
+    margin-right: 50px;
+    top: 0;
+    right: 0;
+
+    &_display {
+        cursor: default;
+        border-style: double;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px .5px rgba(0, 0, 0, 0.2);
+        margin: auto;
+        width: 40vw;
+        max-height: 100vh;
+        padding: 2vw;
+        background-color: #BAEEF7;
+        background: linear-gradient(to bottom, #BAEEF7, rgba(0, 0, 0, 0));
+
+        &_title {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        &_list {
+            text-align: center;
+            padding: 0;
+
+            &_todo {
+                cursor: grab;
+                position: relative;
+                list-style: none;
+                background-color: #BAF7F4;
+                border-style: outset;
+                border-radius: 10px;
+                padding: 0 25px 0 3px;
+                margin: 2px;
+                word-wrap: break-word;
+
+                &:hover {
+                    background-color: #B0E2EA;
+                }
+
+                .task-del {
+                    cursor: pointer;
+                    position: absolute;
+                    font-size: smaller;
+                    top: 2px;
+                    right: 2px;
+                    background-color: rgba(10, 5, 5, 0.26);
+                    width: 20px;
+                    border-radius: 50%;
+
+                    &:hover {
+                        background-color: rgb(0, 0, 0);
+                        color: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+
+        &_add-todo {
+            text-align: center;
+
+            div {
+                margin-bottom: 2vh;
+            }
+
+            #add_input {
+                background-color: #f9f9f9;
+                border-radius: 6px;
+                border: 1px solid #dcdcdc;
+                display: block;
+                margin: 0 auto 5px auto;
+                font-family: 'Permanent Marker', cursive;
+                width: 30vw;
+                height: 30px;
+                text-align: center;
+            }
+
+            #progress_bar {
+                display: block;
+                width: 30vw;
+                margin: auto;
+
+            }
+        }
+    }
+}
+
+#add_btn {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    margin: auto;
+    cursor: pointer;
+    color: #666666;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+#add_btn:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #e9e9e9;
+}
+
+#add_btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.empty {
+    list-style: none;
+}
